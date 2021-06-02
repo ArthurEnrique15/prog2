@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Planta[] plantas = new Planta[3];
+        Planta[] plantas = new Planta[50];
         int operacao;
 
         do {

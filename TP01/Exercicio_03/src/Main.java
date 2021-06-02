@@ -10,6 +10,11 @@ public class Main {
 
         n = scn.nextInt();
 
+        while (n < 1) {
+            System.out.print("Valor inválido, digite novamente: ");
+            n = scn.nextInt();
+        }
+
         resultado = funcao(n);
 
         System.out.println("F(" + n + ") = " + resultado);

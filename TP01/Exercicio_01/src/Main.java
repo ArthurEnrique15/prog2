@@ -54,14 +54,11 @@ public class Main {
                 System.out.print("\nDigite a descrição do serviço: ");
                 servicos[i].descricao = scn.nextLine();
 
-                System.out.print("Digite o valor do serviço: ");
-                servicos[i].valor = scn.nextFloat();
-
                 System.out.print("\n");
                 for (int j = 0; j < manicures.length; j++) {
                     System.out.println((j+1) + ". " + manicures[j]);
                 }
-                System.out.print("Selecione uma manicure: ");
+                System.out.print("Selecione a manicure que realizou o serviço: ");
                 manicure = scn.nextInt();
 
                 servicos[i].manicure = manicures[manicure-1];
@@ -78,7 +75,6 @@ public class Main {
             if (servicos[i] != null) {
                 System.out.println("\nServiço " + (i + 1));
                 System.out.println("Descrição: " + servicos[i].descricao);
-                System.out.println("Valor: R$" + servicos[i].valor);
                 System.out.println("Manicure: " + servicos[i].manicure);
             }
         }
@@ -89,13 +85,14 @@ public class Main {
 
         for (int i = 0; i < manicures.length; i++) {
             System.out.println("Manicure: " + manicures[i]);
-            float valorPago = 0;
+            int qtdServicos = 0;
             for (int j = 0; j < servicos.length; j++) {
                 if (servicos[j] != null && servicos[j].manicure.equals(manicures[i])) {
-                    valorPago += (servicos[j].valor / 2);
+                    qtdServicos++;
                 }
             }
-            System.out.println("Valor a ser pago: R$" + valorPago + "\n");
+            int valorPago = qtdServicos * 15;
+            System.out.println("Valor a ser pago: R$" + valorPago + ",00\n");
         }
     }
 }
