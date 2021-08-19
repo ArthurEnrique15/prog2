@@ -1,5 +1,6 @@
 package Exercicio_06;
 
+import Exercicio_06.factories.SanduicheFactory;
 import Exercicio_06.pao.*;
 import Exercicio_06.presunto.*;
 import Exercicio_06.queijo.*;
@@ -11,11 +12,11 @@ public class Sanduiche {
     private Presunto presunto;
     private Salada salada;
 
-    public Sanduiche(String pao, String queijo, String presunto, String salada) {
-        this.pao = PaoFactory.criarPao(pao);
-        this.queijo = QueijoFactory.criarQueijo(queijo);
-        this.presunto = PresuntoFactory.criarPresunto(presunto);
-        this.salada = SaladaFactory.criarSalada(salada);
+    public Sanduiche(SanduicheFactory sanduicheFactory) {
+        this.pao = sanduicheFactory.criarPao();
+        this.queijo = sanduicheFactory.criarQueijo();
+        this.presunto = sanduicheFactory.criarPresunto();
+        this.salada = sanduicheFactory.criarSalada();
     }
 
     @Override
