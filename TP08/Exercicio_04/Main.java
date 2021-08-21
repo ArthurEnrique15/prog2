@@ -3,26 +3,35 @@ package Exercicio_04;
 public class Main {
     public static void main(String[] args) {
 
-        Sanduiche lanchoneteCG = new Sanduiche("integral", "prato", "frango", "sem verdura");
+        Sanduiche lanchoneteCG = new Sanduiche();
+        lanchoneteCG.setPao("integral");
+        lanchoneteCG.setPresunto("frango");
+        lanchoneteCG.setQueijo("prato");
+        lanchoneteCG.setSalada("sem verdura");
+
         System.out.println("Sanduíche da lanchonete CG");
         System.out.println(lanchoneteCG);
 
         System.out.println();
 
-        Sanduiche lanchoneteJP = new Sanduiche("frances", "mussarela", "frango", "com verdura");
+        Sanduiche lanchoneteJP = new Sanduiche();
+        lanchoneteJP.setPao("frances");
+        lanchoneteJP.setPresunto("frango");
+        lanchoneteJP.setQueijo("mussarela");
+        lanchoneteJP.setSalada("com verdura");
+
         System.out.println("Sanduíche da lanchonete JP");
         System.out.println(lanchoneteJP);
 
         System.out.println();
 
-        Sanduiche lanchoneteRT = new Sanduiche("bola", "cheddar", "peru", "sem verdura");
+        Sanduiche lanchoneteRT = new Sanduiche();
+        lanchoneteRT.setPao("bola");
+        lanchoneteRT.setPresunto("peru");
+        lanchoneteRT.setQueijo("cheddar");
+        lanchoneteRT.setSalada("sem verdura");
+
         System.out.println("Sanduíche da lanchonete RT");
         System.out.println(lanchoneteRT);
-
-        System.out.println();
-
-        Sanduiche meuSanduiche = new Sanduiche("frances", "cheddar", "peru", "com verdura");
-        System.out.println("Meu sanduíche");
-        System.out.println(meuSanduiche);
     }
 }
