@@ -1,16 +1,13 @@
 package Exercicio_06;
 
+import Exercicio_06.ingredientes_genericos.Ingrediente;
 import Exercicio_06.factories.SanduicheFactory;
-import Exercicio_06.pao.*;
-import Exercicio_06.presunto.*;
-import Exercicio_06.queijo.*;
-import Exercicio_06.salada.*;
 
 public class Sanduiche {
-    private Pao pao;
-    private Queijo queijo;
-    private Presunto presunto;
-    private Salada salada;
+    private Ingrediente pao;
+    private Ingrediente presunto;
+    private Ingrediente queijo;
+    private Ingrediente salada;
 
     public Sanduiche(SanduicheFactory sanduicheFactory) {
         this.pao = sanduicheFactory.criarPao();
@@ -22,9 +19,9 @@ public class Sanduiche {
     @Override
     public String toString() {
         return 
-            this.pao.getTipo() + "\n" +
-            this.queijo.getTipo() + "\n" +
-            this.presunto.getTipo() + "\n" +
-            this.salada.getTipo();
+            this.pao.getTipoGenerico() + " " + this.pao.getTipoEspecifico() + "\n" + 
+            this.queijo.getTipoGenerico() + " " + this.queijo.getTipoEspecifico() + "\n" + 
+            this.presunto.getTipoGenerico() + " " + this.presunto.getTipoEspecifico() + "\n" + 
+            this.salada.getTipoGenerico() + " " + this.salada.getTipoEspecifico();
     }
 }

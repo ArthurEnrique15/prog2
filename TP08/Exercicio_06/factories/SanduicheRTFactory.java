@@ -1,30 +1,27 @@
 package Exercicio_06.factories;
 
-import Exercicio_06.pao.*;
-import Exercicio_06.presunto.*;
-import Exercicio_06.queijo.*;
-import Exercicio_06.salada.*;
+import Exercicio_06.ingredientes_genericos.*;
+import Exercicio_06.ingredientes_especificos.*;
 
 public class SanduicheRTFactory implements SanduicheFactory {
 
     @Override
-    public Pao criarPao() {
+    public Ingrediente criarPao() {
         return new PaoBola();
     }
-
+    
     @Override
-    public Presunto criarPresunto() {
+    public Ingrediente criarPresunto() {
         return new PresuntoDePeru();
     }
-
+    
     @Override
-    public Queijo criarQueijo() {
+    public Ingrediente criarQueijo() {
         return new QueijoCheddar();
     }
-
+    
     @Override
-    public Salada criarSalada() {
+    public Ingrediente criarSalada() {
         return new SaladaSemVerdura();
     }
-    
 }
